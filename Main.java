@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
+	//change S1 back to true
 	public static boolean S1 = true;
 	public static boolean S2 = false;
 	public static void main(String[] args) {
@@ -41,7 +42,8 @@ public class Main {
 				else if (Choice == 'Y') {
 					System.out.println("Would you like to see the individual steps of the sorter? (Y)/(N)");
 					char Choice2 = input.next().charAt(0);
-					if(Choice2 == 'Y') {
+					Choice2 = Character.toUpperCase(Choice2);
+					if(Choice2 == 'N') {
 						System.out.println("Disabling steps");
 						S1 = false;
 					}
@@ -99,17 +101,17 @@ public class Main {
 	}
 	
 	public static void intSorter(int[] list1) {
-		//needed variables
+			//needed variables
 				int indexHigh = list1.length-1,
 					indexLow = 0,
 					holder,
 					tMax = list1.length;
-				System.out.println();
 				
 				//sorter
 				for(int i = 0; i <= tMax; i++) {
-					if(S1 = true) {
-					System.out.println("indexHigh = " +indexHigh + "\n indexLow = " + indexLow);
+					if(S1) {
+						System.out.println();
+						System.out.println("indexHigh = " +indexHigh + "\n indexLow = " + indexLow);
 					}
 					if(list1[indexLow] > list1[indexHigh]) {
 						holder = list1[indexLow];
@@ -151,7 +153,7 @@ public class Main {
 					}
 					
 					
-					if(S1 = true) {
+					if(S1) {
 					for(int l= 0; l < list1.length; l ++) {
 						if(l == indexHigh) {
 							System.out.println(list1[l] + " <");
@@ -185,11 +187,11 @@ public class Main {
 						indexLow = 0,
 						tMax = list1.length;
 					double holder;
-					System.out.println();
 					
 					//sorter
 					for(int i = 0; i <= tMax; i++) {
-						if(S1 = true) {
+						if(S1) {
+							System.out.println();
 						System.out.println("indexHigh = " +indexHigh + "\n indexLow = " + indexLow);
 						}
 						if(list1[indexLow] > list1[indexHigh]) {
@@ -232,7 +234,7 @@ public class Main {
 						}
 						
 						
-						if(S1 = true) {
+						if(S1) {
 						for(int l= 0; l < list1.length; l ++) {
 							if(l == indexHigh) {
 								System.out.println(list1[l] + " <");
@@ -258,8 +260,5 @@ public class Main {
 					for(int k = 0; k < list1.length; k++) {
 						System.out.print(list1[k]+ " ");
 					}
-					
-					
-		
 	}
 }
