@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	//change S1 back to true
+	//S2 will have function one day. Maybe not today
 	public static boolean S1 = true;
 	public static boolean S2 = false;
 	public static void main(String[] args) {
@@ -117,6 +117,7 @@ public class Main {
 						holder = list1[indexLow];
 						list1[indexLow] = list1[indexHigh];
 						list1[indexHigh] = holder;
+						tMax++;
 					}
 					
 					if(list1[indexHigh] < list1[indexHigh-1]) {
@@ -198,6 +199,7 @@ public class Main {
 							holder = list1[indexLow];
 							list1[indexLow] = list1[indexHigh];
 							list1[indexHigh] = holder;
+							tMax++;
 						}
 						
 						if(list1[indexHigh] < list1[indexHigh-1]) {
